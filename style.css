@@ -1,0 +1,88 @@
+/* Body */
+body {
+    background: #f4f7fb;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+
+/* Main heading */
+h1 {
+    font-weight: 700;
+    color: #333;
+}
+
+
+/* Task Input Card */
+.card {
+    border-radius: 15px;
+    border: none;
+}
+
+
+/* Input */
+#taskInput {
+    border-radius: 10px 0 0 10px;
+}
+
+
+/* Add button */
+#addTaskBtn {
+    border-radius: 0 10px 10px 0;
+}
+
+
+
+/* Task List */
+.list-group-item {
+
+    margin-bottom: 12px;
+    border-radius: 12px !important;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+
+}
+
+
+
+/* Hover effect */
+.list-group-item:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+
+/* Completed task */
+.completed {
+
+    text-decoration: line-through;
+    color: gray;
+
+}
+
+
+
+/* Buttons */
+.btn {
+
+    border-radius: 8px;
+
+}
+
+
+
+/* Empty space */
+#taskList {
+
+    margin-bottom: 30px;
+
+}
