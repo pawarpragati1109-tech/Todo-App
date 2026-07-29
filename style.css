@@ -1,88 +1,130 @@
-/* Body */
-body {
-    background: #f4f7fb;
-    font-family: Arial, sans-serif;
+:root{
+    --bg-color: #F8F7F2;
+    --primary: #7A8F6B;
+    --secondary: #D6CE93;
+    --accent: #D8A48F;
+    --danger: #C97B84;
+    --card: #FFFFFF;
+    --text: #333333;
 }
 
+body{
+    background-color: var(--bg-color);
+    color: var(--text);
+    font-family: "Poppins", sans-serif;
+}
 
 /* Navbar */
-.navbar {
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+.navbar{
+    background-color: var(--primary) !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
 }
 
-
-/* Main heading */
-h1 {
+/* Heading */
+h1{
+    color: var(--primary);
     font-weight: 700;
-    color: #333;
 }
 
-
-/* Task Input Card */
-.card {
-    border-radius: 15px;
+/* Card */
+.card{
+    background: var(--card);
     border: none;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
 }
-
 
 /* Input */
-#taskInput {
-    border-radius: 10px 0 0 10px;
+.form-control,
+.form-select{
+    border-radius: 10px;
+    border: 1px solid #ddd;
 }
 
-
-/* Add button */
-#addTaskBtn {
-    border-radius: 0 10px 10px 0;
+.form-control:focus,
+.form-select:focus{
+    border-color: var(--primary);
+    box-shadow: 0 0 0 .2rem rgba(122,143,107,.25);
 }
 
-
-
-/* Task List */
-.list-group-item {
-
+/* Task Cards */
+.list-group-item{
+    border: none;
+    border-radius: 14px !important;
     margin-bottom: 12px;
-    border-radius: 12px !important;
-
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-
-    transition: 0.3s;
-
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,.06);
+    transition: .3s;
 }
 
-
-
-/* Hover effect */
-.list-group-item:hover {
-
+.list-group-item:hover{
     transform: translateY(-3px);
-
 }
 
-
-
-/* Completed task */
-.completed {
-
+/* Completed Task */
+.completed{
     text-decoration: line-through;
-    color: gray;
-
+    opacity: .6;
 }
-
-
 
 /* Buttons */
-.btn {
-
-    border-radius: 8px;
-
+.btn{
+    border-radius: 10px;
+    border: none;
+    transition: .3s;
 }
 
+.btn-primary{
+    background: var(--primary);
+}
 
+.btn-primary:hover{
+    background: #687d5b;
+}
 
-/* Empty space */
-#taskList {
+.btn-warning{
+    background: var(--accent);
+    color: white;
+}
 
-    margin-bottom: 30px;
+.btn-warning:hover{
+    background: #c88f78;
+    color: white;
+}
 
+.btn-danger{
+    background: var(--danger);
+}
+
+.btn-danger:hover{
+    background: #b96872;
+}
+
+.btn-success{
+    background: var(--secondary);
+    color: var(--text);
+}
+
+.btn-success:hover{
+    background: #c6bd82;
+    color: var(--text);
+}
+
+/* Priority Badges */
+.high{
+    background:#C97B84;
+}
+
+.medium{
+    background:#D6CE93;
+    color:#333;
+}
+
+.low{
+    background:#7A8F6B;
+}
+
+.badge{
+    padding:7px 12px;
+    border-radius:20px;
 }

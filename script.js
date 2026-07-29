@@ -1,7 +1,15 @@
 const taskInput = document.getElementById("taskInput");
 const addTaskBtn = document.getElementById("addTaskBtn");
 const taskList = document.getElementById("taskList");
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("input", function () {
+    displayTasks(searchInput.value);
+});
+
 let editId = null;
+
+const priority = document.getElementById("priority");
 
 
 // Get tasks from Local Storage
@@ -21,11 +29,11 @@ addTaskBtn.addEventListener("click", function () {
 
 
     let task = {
-        id: Date.now(),
-        text: taskText,
-        completed: false
-    };
-
+    id: Date.now(),
+    text: taskText,
+    priority: priority.value,
+    completed: false
+};
 
     tasks.push(task);
 
@@ -54,12 +62,18 @@ function saveTasks() {
 
 
 // Display Tasks
-function displayTasks() {
+function displayTasks(searchText = "") {
 
     taskList.innerHTML = "";
 
 
-    tasks.forEach(function(task) {
+    tasks
+    .filter(function(task) {
+        return task.text
+            .toLowerCase()
+            .includes(searchText.toLowerCase());
+    })
+    .forEach(function(task) {
 
 
         let li = document.createElement("li");
@@ -76,7 +90,18 @@ function displayTasks() {
             ${task.text}
         </span>
 
+            <br>
 
+            <span class="badge ${
+                task.priority === "High"
+                    ? "bg-danger"
+                    : task.priority === "Medium"
+                    ? "bg-warning text-dark"
+                    : "bg-success"
+            }">
+                ${task.priority}
+            </span>
+            
         <div>
 
             <button 
