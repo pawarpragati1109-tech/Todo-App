@@ -2,7 +2,7 @@ const taskInput = document.getElementById("taskInput");
 const addTaskBtn = document.getElementById("addTaskBtn");
 const taskList = document.getElementById("taskList");
 const searchInput = document.getElementById("searchInput");
-
+const themeBtn = document.getElementById("themeBtn");
 const totalTasks = document.getElementById("totalTasks");
 const completedTasks = document.getElementById("completedTasks");
 const pendingTasks = document.getElementById("pendingTasks");
@@ -188,3 +188,22 @@ function updateTask() {
 
 // Initial Load
 displayTasks();
+
+// Dark Mode
+
+themeBtn.addEventListener("click", function(){
+
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+
+        themeBtn.innerHTML = "☀️";
+
+    }
+    else{
+
+        themeBtn.innerHTML = "🌙";
+
+    }
+
+});

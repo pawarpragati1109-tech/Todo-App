@@ -128,3 +128,60 @@ h1{
     padding:7px 12px;
     border-radius:20px;
 }
+
+/* Dark Mode */
+
+body.dark-mode{
+    background:#1E1E1E;
+    color:#F8F7F2;
+}
+
+/* Navbar */
+
+body.dark-mode .navbar{
+    background:#111111 !important;
+}
+
+/* Cards */
+
+body.dark-mode .card{
+    background:#2B2B2B;
+    color:white;
+}
+
+/* Task Cards */
+
+body.dark-mode .list-group-item{
+    background:#2B2B2B;
+    color:white;
+}
+
+/* Inputs */
+
+body.dark-mode .form-control{
+    background:#3B3B3B;
+    color:white;
+    border:1px solid #555;
+}
+
+body.dark-mode .form-control::placeholder{
+    color:#ccc;
+}
+
+body.dark-mode .form-control:focus{
+    background:#3B3B3B;
+    color:white;
+}
+
+/* Search */
+
+body.dark-mode #searchInput{
+    background:#3B3B3B;
+    color:white;
+}
+
+/* Buttons */
+
+body.dark-mode .btn-light{
+    background:white;
+}
