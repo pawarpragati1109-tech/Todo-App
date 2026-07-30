@@ -64,7 +64,7 @@ h1{
 /* Completed Task */
 .completed{
     text-decoration: line-through;
-    opacity: .6;
+    opacity: 0.6;
 }
 
 /* Buttons */
