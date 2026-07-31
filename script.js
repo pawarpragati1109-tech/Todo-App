@@ -23,7 +23,7 @@ addTaskBtn.addEventListener("click", function () {
     let taskText = taskInput.value.trim();
 
     if (taskText === "") {
-        alert("Please enter a task");
+        showToast("⚠️ Please enter a task");
         return;
     }
 
@@ -207,3 +207,15 @@ themeBtn.addEventListener("click", function(){
     }
 
 });
+
+function showToast(message){
+
+    document.getElementById("toastMessage").textContent = message;
+
+    let toast = new bootstrap.Toast(
+        document.getElementById("liveToast")
+    );
+
+    toast.show();
+
+}
